@@ -1,20 +1,20 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\JoãoVitor\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @fastify/cors
+  C:\Program Files\nodejs\node.exe C:\Users\jovio\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add zod
 
 PATH: 
-  C:\Users\JoãoVitor\bin;C:\Users\JoãoVitor\AppData\Local\Programs\Git\mingw64\bin;C:\Users\JoãoVitor\AppData\Local\Programs\Git\usr\local\bin;C:\Users\JoãoVitor\AppData\Local\Programs\Git\usr\bin;C:\Users\JoãoVitor\AppData\Local\Programs\Git\usr\bin;C:\Users\JoãoVitor\AppData\Local\Programs\Git\mingw64\bin;C:\Users\JoãoVitor\AppData\Local\Programs\Git\usr\bin;C:\Users\JoãoVitor\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Users\JoãoVitor\AppData\Local\Microsoft\WindowsApps;C:\Users\JoãoVitor\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\JoãoVitor\AppData\Local\Programs\Git\cmd;C:\Users\JoãoVitor\AppData\Roaming\npm;C:\Users\JoãoVitor\AppData\Local\Programs\Git\usr\bin\vendor_perl;C:\Users\JoãoVitor\AppData\Local\Programs\Git\usr\bin\core_perl
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\jovio\bin;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\jdk-17.0.2\bin;C:\Android\Sdk\emulator;C:\Android\Sdk\tools;C:\Android\Sdk\tools\bin;C:\Android\Sdk\platform-tools;C:\Users\jovio\AppData\Local\Yarn\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files\dotnet;C:\Users\jovio\AppData\Local\Pub\Cache\bin;C:\flutter\bin;C:\Program Files\Go\bin;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn;C:\Program Files\Microsoft SQL Server\150\DTS\Binn;C:\Program Files\Azure Data Studio\bin;C:\Users\jovio\AppData\Local\Microsoft\WindowsApps;C:\Users\jovio\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\jovio\AppData\Roaming\npm;C:\flutter\bin;C:\Users\jovio\.dotnet\tools;C:\Users\jovio\AppData\Local\Pub\Cache\bin;C:\Users\jovio\go\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\jovio\AppData\Local\Programs\Azure Data Studio\bin
 
 Yarn version: 
-  1.22.19
+  1.22.18
 
 Node version: 
-  16.16.0
+  16.14.2
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\JoãoVitor\OneDrive - Atlas Governance\Documentos\github\habit-control\node_modules\prisma\engines\d6e67a83f971b175a593ccc12e15c4a757f93ffe\query_engine-windows.dll.node'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\jovio\OneDrive\Documentos\github\habit-control\node_modules\prisma\engines\d6e67a83f971b175a593ccc12e15c4a757f93ffe\query_engine-windows.dll.node'
 
 npm manifest: 
   {
@@ -38,6 +38,7 @@ npm manifest:
     },
     "homepage": "https://github.com/JoVi0li/habit-control#readme",
     "dependencies": {
+      "@fastify/cors": "^8.2.0",
       "@prisma/client": "^4.8.1",
       "fastify": "^4.11.0"
     },
@@ -45,6 +46,9 @@ npm manifest:
       "prisma": "^4.8.1",
       "tsx": "^3.12.2",
       "typescript": "^4.9.4"
+    },
+    "prisma": {
+      "seed": "tsx prisma/seed.ts"
     }
   }
 
@@ -98,6 +102,14 @@ Lockfile:
       ajv "^8.11.0"
       ajv-formats "^2.1.1"
       fast-uri "^2.0.0"
+  
+  "@fastify/cors@^8.2.0":
+    version "8.2.0"
+    resolved "https://registry.yarnpkg.com/@fastify/cors/-/cors-8.2.0.tgz#44ce6b28bc111e12679cb02f980f0ce865ff4877"
+    integrity sha512-qDgwpmg6C4D0D3nh8MTMuRXWyEwPnDZDBODaJv90FP2o9ukbahJByW4FtrM5Bpod5KbTf1oIExBmpItbUTQmHg==
+    dependencies:
+      fastify-plugin "^4.0.0"
+      mnemonist "0.39.5"
   
   "@fastify/deepmerge@^1.0.0":
     version "1.3.0"
@@ -393,6 +405,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-2.2.0.tgz#519a0f849bef714aad10e9753d69d8f758f7445a"
     integrity sha512-cIusKBIt/R/oI6z/1nyfe2FvGKVTohVRfvkOhvx0nCEW+xf5NoCXjAHcWp93uOUBchzYcsvPlrapAdX1uW+YGg==
   
+  fastify-plugin@^4.0.0:
+    version "4.5.0"
+    resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-4.5.0.tgz#8b853923a0bba6ab6921bb8f35b81224e6988d91"
+    integrity sha512-79ak0JxddO0utAXAQ5ccKhvs6vX2MGyHHMMsmZkBANrq3hXc1CHzvNPHOcvTsVMEPl5I+NT+RO4YKMGehOfSIg==
+  
   fastify@^4.11.0:
     version "4.11.0"
     resolved "https://registry.yarnpkg.com/fastify/-/fastify-4.11.0.tgz#7fa5614c81a618e67a7a467f0f1b33c43f4ff7d2"
@@ -476,10 +493,22 @@ Lockfile:
     dependencies:
       yallist "^4.0.0"
   
+  mnemonist@0.39.5:
+    version "0.39.5"
+    resolved "https://registry.yarnpkg.com/mnemonist/-/mnemonist-0.39.5.tgz#5850d9b30d1b2bc57cc8787e5caa40f6c3420477"
+    integrity sha512-FPUtkhtJ0efmEFGpU14x7jGbTB+s18LrzRL2KgoWz9YvcY3cPomz8tih01GbHwnGk/OmkOKfqd/RAQoc8Lm7DQ==
+    dependencies:
+      obliterator "^2.0.1"
+  
   ms@2.1.2:
     version "2.1.2"
     resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
     integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+  
+  obliterator@^2.0.1:
+    version "2.0.4"
+    resolved "https://registry.yarnpkg.com/obliterator/-/obliterator-2.0.4.tgz#fa650e019b2d075d745e44f1effeb13a2adbe816"
+    integrity sha512-lgHwxlxV1qIg1Eap7LgIeoBWIMFibOjbrYPIPJZcI1mmGAI2m3lNYpK12Y+GBdPQ0U1hRwSord7GIaawz962qQ==
   
   on-exit-leak-free@^2.1.0:
     version "2.1.0"
