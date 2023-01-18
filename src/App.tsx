@@ -1,10 +1,17 @@
-import { HabitComponent } from './app/components/habits';
-import './shared/styles/global.css';
+
+import { HeaderComponent, SummaryTableComponent } from './components';
+import './styles/global.css';
 
 function App() {
 
   return (
-    <HabitComponent completed={2}/>
+    <div className='w-screen h-screen flex justify-center items-center'>
+      <div className='w-full max-w-5xl px-6 flex flex-col'>
+        <HeaderComponent />
+        <SummaryTableComponent />
+      </div>
+
+    </div>
   )
 }
 

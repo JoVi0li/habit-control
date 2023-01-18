@@ -1,0 +1,1 @@
+export { default as generateDatesFromYearBeginningUtil } from './generate-dates-from-year-beginning';
